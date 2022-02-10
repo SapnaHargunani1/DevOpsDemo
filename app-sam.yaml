@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09' 
-Transform: AWS::Serverless-2016-10-31 
- 
+Transform: AWS::Serverless-2016-10-31
+
 Parameters: 
   Stage: 
     Type: String 
@@ -65,7 +65,7 @@ Resources:
 #          SQL_PROPERTIES_FILE_LOCATION: '{{resolve:ssm:/uat/db/sqllocation:1}}' 
 
 
- ListInstitutionAdminsFunction:
+  ListInstitutionAdminsFunction:
     Type: AWS::Serverless::Function
     Properties: 
       FunctionName: ListInstitutionAdmins 
