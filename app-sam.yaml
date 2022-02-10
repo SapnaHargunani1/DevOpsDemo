@@ -42,7 +42,7 @@ Globals:
         - sg-0c2161b1d4db183d6
       SubnetIds:
         - subnet-03237258d1f78d565
-        - subnet-03237258d1f78d565          
+        - subnet-033396d6e2c4bc2f2       
                 
 Resources:
   ListInstitutionsFunction:
@@ -65,7 +65,7 @@ Resources:
 #          SQL_PROPERTIES_FILE_LOCATION: '{{resolve:ssm:/uat/db/sqllocation:1}}' 
 
 
-  ListInstitutionAdminsFunction:
+ ListInstitutionAdminsFunction:
     Type: AWS::Serverless::Function
     Properties: 
       FunctionName: ListInstitutionAdmins 
