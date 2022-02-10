@@ -15,7 +15,7 @@ import com.hcl.adi.chf.util.ResponseGenerator;
 /**
  * This lambda function will return the list of institutions
  *
- * @author
+ * @author SandeepSingh
  */
 public final class ListOrganization implements RequestHandler<Object, List<Organization>> {
 	private static final Logger LOGGER = LogManager.getLogger(ListOrganization.class.getName());

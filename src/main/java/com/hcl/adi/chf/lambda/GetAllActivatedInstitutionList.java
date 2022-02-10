@@ -13,25 +13,25 @@ import com.hcl.adi.chf.service.InstitutionService;
 import com.hcl.adi.chf.util.ResponseGenerator;
 
 /**
- * This lambda function will return the list of institutions
+ * This lambda function will return the list of all activated institution
  *
- * @author AyushRa
+ * @author DivyaAg
  */
-public final class ListInstitutions implements RequestHandler<Object, List<Institution>> {
-	private static final Logger LOGGER = LogManager.getLogger(ListInstitutions.class.getName());
+public final class GetAllActivatedInstitutionList implements RequestHandler<Object, List<Institution>> {
+	private static final Logger LOGGER = LogManager.getLogger(GetAllActivatedInstitutionList.class.getName());
 	private List<Institution> institutionList = null;
 
 	@Override
 	public List<Institution> handleRequest(final Object input, final Context context) {
-		LOGGER.info(":::::::Request start to list institutions:::::::");
+		LOGGER.info(":::::::Request start to get all activated institution:::::::");
 
 		InstitutionService institutionServiceObj = new InstitutionService();
-		institutionList = institutionServiceObj.getInstitutions();
+		institutionList = institutionServiceObj.getActivatedInstitutions();
 
-		LOGGER.info(":::::::Request completed to list institutions:::::::");
+		LOGGER.info(":::::::Request completed to get all activated institution:::::::");
 
 		if (institutionList == null || institutionList.isEmpty()) {
-			ResponseGenerator.generateResponse(null, ApiErrorKey.LIST_INSTITUTION.name(), false);
+			ResponseGenerator.generateResponse(null, ApiErrorKey.GET_ALL_ACTIVATED_INSTITUTION_LIST.name(), false);
 		}
 
 		return institutionList;

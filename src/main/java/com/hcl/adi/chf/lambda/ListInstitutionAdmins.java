@@ -16,7 +16,7 @@ import com.hcl.adi.chf.util.ResponseGenerator;
 /**
  * This lambda function will return the list of institution admins
  *
- * @author
+ * @author AyushRa
  */
 public final class ListInstitutionAdmins implements RequestHandler<Object, List<Admins>> {
 	private static final Logger LOGGER = LogManager.getLogger(ListInstitutionAdmins.class.getName());
